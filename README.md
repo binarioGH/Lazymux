@@ -7,7 +7,7 @@ Lazymux tools installer is very easy to use, only provided for lazy termux users
 
 #### Installation and Using Lazymux
 ```
-git clone https://github.com/Gameye98/Lazymux
+git clone https://github.com/binarioGH/Lazymux
 ```
 ```
 cd Lazymux
