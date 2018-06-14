@@ -4,6 +4,10 @@ import os
 import sys
 import time
 
+def printoptions(options):
+	for option in options:
+		print(option)
+
 lazymux_banner = """
 .-.                                           
 : :                                           
@@ -17,23 +21,29 @@ backtomenu_banner = """
   [99] Back to main menu
   [00] Exit the Lazymux
 """
+
 def restart_program():
 	python = sys.executable
 	os.execl(python, python, * sys.argv)
 	curdir = os.getcwd()
 
+def wronginput():
+	print("\nERROR: Wrong Input")
+	timeout(2)
+	restart_program()
+
+
+
 def backtomenu_option():
-	print backtomenu_banner
-	backtomenu = raw_input("lzmx > ")
+	print (backtomenu_banner)
+	backtomenu = input("lzmx > ")
 	
 	if backtomenu == "99":
 		restart_program()
 	elif backtomenu == "00":
 		sys.exit()
 	else:
-		print "\nERROR: Wrong Input"
-		time.sleep(2)
-		restart_program()
+		wronginput()
 
 def banner():
 	print lazymux_banner

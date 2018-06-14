@@ -7,40 +7,18 @@ from core.lzmcore import *
 
 def main():
 	banner()
-	print "   [01] Information Gathering"
-	print "   [02] Vulnerability Scanner"
-	print "   [03] Stress Testing"
-	print "   [04] Password Attacks"
-	print "   [05] Web Hacking"
-	print "   [06] Exploitation Tools"
-	print "   [07] Sniffing & Spoofing"
-	print "   [08] Other\n"
-	print "   [10] Exit the Lazymux\n"
-	lazymux = raw_input("lzmx > ")
+	printoptions(("[01] Information Gathering", "[02] Vulnerability Scanner", 
+	"[03] Stress Testing", "[04] Password Attacks", "[05] Web Hacking", "06] Exploitation Tools",
+	"[07] Sniffing & Spoofing", "[08] Other\n","[10] Exit the Lazymux\n"))
+	lazymux = input("lzmx > ")
 	
 	if lazymux == "1" or lazymux == "01":
-		print "\n    [01] Nmap"
-		print "    [02] Red Hawk"
-		print "    [03] D-Tect"
-		print "    [04] sqlmap"
-		print "    [05] Infoga"
-		print "    [06] ReconDog"
-		print "    [07] AndroZenmap"
-		print "    [08] sqlmate"
-		print "    [09] AstraNmap"
-		print "    [10] WTF"
-		print "    [11] Easymap"
-		print "    [12] BlackBox"
-		print "    [13] XD3v"
-		print "    [14] Crips"
-		print "    [15] SIR"
-		print "    [16] EvilURL"
-		print "    [17] Striker"
-		print "    [18] Xshell"
-		print "    [19] OWScan"
-		print "    [20] OSIF\n"
-		print "    [00] Back to main menu\n"
-		infogathering = raw_input("lzmx > ")
+		printoptions(("\n[01] Nmap","[02] Red Hawk","[03] D-Tect","[04] sqlmap",
+			"[05] Infoga","[06] ReconDog","[07] AndroZenmap","[08] sqlmate", "[09] AstraNmap",
+			"[10] WTF","[11] Easymap","[12] BlackBox","[13] XD3v","[14] Crips","[15] SIR",
+			"[16] EvilURL","[17] Striker","[18] Xshell","[19] OWScan","[20] OSIF\n",
+			"[00] Back to main menu\n"))
+		infogathering = input("lzmx > ")
 		
 		if infogathering == "01" or infogathering == "1":
 			nmap()
@@ -85,37 +63,15 @@ def main():
 		elif infogathering == "00" or infogathering == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
-			timeout(2)
-			restart_program()
+			wronginput()
 	
 	elif lazymux == "2" or lazymux == "02":
-		print "\n    [01] Nmap"
-		print "    [02] AndroZenmap"
-		print "    [03] AstraNmap"
-		print "    [04] Easymap"
-		print "    [05] Red Hawk"
-		print "    [06] D-Tect"
-		print "    [07] Damn Small SQLi Scanner"
-		print "    [08] SQLiv"
-		print "    [09] sqlmap"
-		print "    [10] sqlscan"
-		print "    [11] Wordpresscan"
-		print "    [12] WPScan"
-		print "    [13] sqlmate"
-		print "    [14] wordpresscan"
-		print "    [15] WTF"
-		print "    [16] Rang3r"
-		print "    [17] Striker"
-		print "    [18] Routersploit"
-		print "    [19] Xshell"
-		print "    [20] SH33LL"
-		print "    [21] BlackBox"
-		print "    [22] XAttacker"
-		print "    [23] OWScan\n"
-		print "    [00] Back to main menu\n"
-		vulnscan = raw_input("lzmx > ")
-		
+		printoptions(("\n[01] Nmap","[02] AndroZenmap","[03] AstraNmap","[04] Easymap","[05] Red Hawk",
+			 "[06] D-Tect","[07] Damn Small SQLi Scanner","[08] SQLiv","[09] sqlmap","[10] sqlscan",
+			 "[11] Wordpresscan","[12] WPScan","[13] sqlmate","[14] wordpresscan","[15] WTF",
+			 "[16] Rang3r","[17] Striker","[18] Routersploit","[19] Xshell","[20] SH33LL",
+			 "[21] BlackBox","[22] XAttacker","[23] OWScan\n","[00] Back to main menu\n"))
+		vulnscan = input("lzmx > ")
 		if vulnscan == "01" or vulnscan == "1":
 			nmap()
 		elif vulnscan == "02" or vulnscan == "2":
@@ -165,24 +121,12 @@ def main():
 		elif vulnscan == "00" or vulnscan == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
-			timeout(2)
-			restart_program()
-	
+			wronginput()
 	elif lazymux == "3" or lazymux == "03":
-		print "\n    [01] Torshammer"
-		print "    [02] Slowloris"
-		print "    [03] Fl00d & Fl00d2"
-		print "    [04] GoldenEye"
-		print "    [05] Xerxes"
-		print "    [06] Planetwork-DDOS"
-		print "    [07] Hydra"
-		print "    [08] Black Hydra"
-		print "    [09] Xshell"
-		print "    [10] santet-online\n"
-		print "    [00] Back to main menu\n"
-		stresstest = raw_input("lzmx > ")
-		
+		printoptions(("\n[01] Torshammer","[02] Slowloris","[03] Fl00d & Fl00d2","[04] GoldenEye",
+			"[05] Xerxes","[06] Planetwork-DDOS","[07] Hydra","[08] Black Hydra","[09] Xshell",
+			"[10] santet-online\n","[00] Back to main menu\n"))
+		stresstest = input("lzmx > ")
 		if stresstest == "01" or stresstest == "1":
 			torshammer()
 		elif stresstest == "02" or stresstest == "2":
@@ -206,29 +150,15 @@ def main():
 		elif stresstest == "00" or stresstest == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
-			timeout(2)
-			restart_program()
+			wronginput()
 	
 	elif lazymux == "4" or lazymux == "04":
-		print "\n    [01] Hydra"
-		print "    [02] Facebook Brute Force"
-		print "    [03] Facebook Brute Force 2"
-		print "    [04] Facebook Brute Force 3"
-		print "    [05] Black Hydra"
-		print "    [06] Hash Buster"
-		print "    [07] 1337Hash"
-		print "    [08] Cupp"
-		print "    [09] InstaHack"
-		print "    [10] Indonesian Wordlist"
-		print "    [11] Xshell"
-		print "    [12] Social-Engineering"
-		print "    [13] BlackBox"
-		print "    [14] Hashzer"
-		print "    [15] Hasher"
-		print "    [16] Hash-Generator\n"
-		print "    [00] Back to main menu\n"
-		passtak = raw_input("lzmx > ")
+		printoptions(("\n[01] Hydra","[02] Facebook Brute Force","[03] Facebook Brute Force 2",
+			"[04] Facebook Brute Force 3","[05] Black Hydra","[06] Hash Buster","[07] 1337Hash",
+			"[08] Cupp","[09] InstaHack","[10] Indonesian Wordlist","[11] Xshell",
+			"[12] Social-Engineering","[13] BlackBox","[14] Hashzer","[15] Hasher",
+			"[16] Hash-Generator\n","[00] Back to main menu\n"))
+		passtak = input("lzmx > ")
 		
 		if passtak == "01" or passtak == "1":
 			hydra()
@@ -265,30 +195,14 @@ def main():
 		elif passtak == "00" or passtak == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
-			timeout(2)
-			restart_program()
+			wronginput()
 	
 	elif lazymux == "5" or lazymux == "05":
-		print "\n    [01] sqlmap"
-		print "    [02] Webdav"
-		print "    [03] xGans"
-		print "    [04] Webdav Mass Exploit"
-		print "    [05] WPSploit"
-		print "    [06] sqldump"
-		print "    [07] Websploit"
-		print "    [08] sqlmate"
-		print "    [09] sqlokmed"
-		print "    [10] zones"
-		print "    [11] Xshell"
-		print "    [12] SH33LL"
-		print "    [13] XAttacker"
-		print "    [14] XSStrike"
-		print "    [15] Breacher"
-		print "    [16] OWScan"
-		print "    [17] ko-dork\n"
-		print "    [00] Back to main menu\n"
-		webhack = raw_input("lzmx > ")
+		printoptions(("\n[01] sqlmap","[02] Webdav","[03] xGans","[04] Webdav Mass Exploit",
+			"[05] WPSploit","[06] sqldump","[07] Websploit","[08] sqlmate","[09] sqlokmed",
+			"[10] zones","[11] Xshell","[12] SH33LL","[13] XAttacker","[14] XSStrike",
+			"[15] Breacher","[16] OWScan","[17] ko-dork\n","[00] Back to main menu\n"))
+		webhack = input("lzmx > ")
 		
 		if webhack == "01" or webhack == "1":
 			sqlmap()
@@ -327,22 +241,11 @@ def main():
 		elif webhack == "00" or webhack == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
-			timeout(2)
-			restart_program()
+			wronginput()
 	elif lazymux == "6" or lazymux == "06":
-		print "\n    [01] Metasploit"
-		print "    [02] commix"
-		print "    [03] sqlmap"
-		print "    [04] Brutal"
-		print "    [05] A-Rat"
-		print "    [06] WPSploit"  
-		print "    [07] Websploit"
-		print "    [08] Routersploit"
-		print "    [09] BlackBox"
-		print "    [10] XAttacker"
-		print "    [11] TXTool\n"
-		print "    [00] Back to main menu\n"
+		printoptions(("\n[01] Metasploit","[02] commix","[03] sqlmap","[04] Brutal","[05] A-Rat",
+			"[06] WPSploit","[07] Websploit","[08] Routersploit","[09] BlackBox","[10] XAttacker"
+			"[11] TXTool\n","[00] Back to main menu\n")) 
 		exploitool = raw_input("lzmx > ")
 		
 		if exploitool == "01" or exploitool == "1":
@@ -370,9 +273,7 @@ def main():
 		elif exploitool == "00" or exploitool == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
-			timeout(2)
-			restart_program()
+			wronginput()
 	elif lazymux == "7" or lazymux == "07":
 		print "\n    [01] KnockMail"
 		print "    [02] Spammer-Grab"
@@ -401,23 +302,13 @@ def main():
 		elif sspoof == "00" or sspoof == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
-			timeout(2)
-			restart_program()
+			wronginput()
 	
 	elif lazymux == "8" or lazymux == "08":
-		print "\n    [01] SpiderBot"
-		print "    [02] Ngrok"
-		print "    [03] Sudo"
-		print "    [04] Ubuntu"
-		print "    [05] Fedora"
-		print "    [06] Kali Nethunter"
-		print "    [07] VCRT"
-		print "    [08] E-Code"
-		print "    [09] Termux-Styling"
-		print "    [10] PassGen\n"
-		print "    [00] Back to main menu\n"
-		moretool = raw_input("lzmx > ")
+		printoptions(("\n[01] SpiderBot","[02] ngrokrok","[03] Sudo","[04] Ubuntu","[05] Fedora",
+			"[06] Kali Nethunter","[07] VCRT","[08] E-Code","[09] Termux-Styling","[10] PassGen\n",
+			"[00] Back to main menu\n"))
+		moretool = input("lzmx > ")
 		
 		if moretool == "01" or moretool == "1":
 			spiderbot()
@@ -442,17 +333,13 @@ def main():
 		elif moretool == "00" or moretool == "0":
 			restart_program()
 		else:
-			print "\nERROR: Wrong Input"
-			timeout(2)
-			restart_program()
+			wronginput()
 	
 	elif lazymux == "10":
 		sys.exit()
 	
 	else:
-		print "\nERROR: Wrong Input"
-		timeout(2)
-		restart_program()
+		wronginput()
 
 if __name__ == "__main__":
 	main()
