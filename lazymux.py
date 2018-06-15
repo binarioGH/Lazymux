@@ -9,7 +9,7 @@ from core.lzmcore import *
 def main():
 	banner()
 	printoptions(("[01] Information Gathering", "[02] Vulnerability Scanner", 
-	"[03] Stress Testing", "[04] Password Attacks", "[05] Web Hacking", "06] Exploitation Tools",
+	"[03] Stress Testing", "[04] Password Attacks", "[05] Web Hacking", "[06] Exploitation Tools",
 	"[07] Sniffing & Spoofing", "[08] Other\n","[10] Exit the Lazymux\n"))
 	lazymux = input("lzmx > ")
 	
