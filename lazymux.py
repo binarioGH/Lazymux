@@ -11,7 +11,7 @@ def main():
 	printoptions(("[01] Information Gathering", "[02] Vulnerability Scanner", 
 	"[03] Stress Testing", "[04] Password Attacks", "[05] Web Hacking", "06] Exploitation Tools",
 	"[07] Sniffing & Spoofing", "[08] Other\n","[10] Exit the Lazymux\n"))
-	lazymux = raw_input("lzmx > ")
+	lazymux = input("lzmx > ")
 	
 	if lazymux == "1" or lazymux == "01":
 		printoptions(("\n[01] Nmap","[02] Red Hawk","[03] D-Tect","[04] sqlmap",
@@ -19,7 +19,7 @@ def main():
 			"[10] WTF","[11] Easymap","[12] BlackBox","[13] XD3v","[14] Crips","[15] SIR",
 			"[16] EvilURL","[17] Striker","[18] Xshell","[19] OWScan","[20] OSIF\n",
 			"[00] Back to main menu\n"))
-		infogathering = raw_input("lzmx > ")
+		infogathering = input("lzmx > ")
 		
 		if infogathering == "01" or infogathering == "1":
 			download("Nmap", ('apt install nmap'))
@@ -139,11 +139,11 @@ def main():
 		elif stresstest == "05" or stresstest == "5":
 			download("Xerxes",('apt install git','apt install clang','git clone https://github.com/zanyarjamal/xerxes','mv xerxes ~','cd ~/xerxes && clang xerxes.c -o xerxes'))
 		elif stresstest == "06" or stresstest == "6":
-			planetwork_ddos()
+			download("Planetwork-DDOS",('apt install git python2','git clone https://github.com/Hydra7/Planetwork-DDOS','mv Planetwork-DDOS ~'))
 		elif stresstest == "07" or stresstest == "7":
-			hydra()
+			download("Hydra",('apt install hydra'))
 		elif stresstest == "08" or stresstest == "8":
-			black_hydra()
+			download("Black Hydra",('apt install hydra git python2','git clone https://github.com/Gameye98/Black-Hydra','mv Black-Hydra ~'))
 		elif stresstest == "09" or stresstest == "9":
 			download("Xshell",("apt install lynx python2 figlet ruby php nano w3m","git clone https://github.com/Ubaii/Xshell","mv Xshell ~"))
 		elif stresstest == "10":
@@ -158,7 +158,7 @@ def main():
 			"[04] Facebook Brute Force 3","[05] Black Hydra","[06] Hash Buster","[07] 1337Hash",
 			"[08] Cupp","[09] InstaHack","[10] Indonesian Wordlist","[11] Xshell",
 			"[12] Social-Engineering","[13] BlackBox","[14] Hashzer","[15] Hasher",
-			"[16] Hash-Generator\n","[00] Back to main menu\n"))
+			"[16] Hash-Generator","[17] Newbie_Box\n","[00] Back to main menu\n"))
 		passtak = raw_input("lzmx > ")
 		
 		if passtak == "01" or passtak == "1":
@@ -180,19 +180,21 @@ def main():
 		elif passtak == "09" or passtak == "9":
 			download("InstaHack",('apt install python2 git','pip2 install requests','git clone https://github.com/avramit/instahack','mv instahack ~'))
 		elif passtak == "10":
-			indonesian_wordlist()
+			download("indonesian-wordlist",('apt install git','git clone https://github.com/geovedi/indonesian-wordlist','mv indonesian-wordlist ~'))
 		elif passtak == "11":
 			download("Xshell",("apt install lynx python2 figlet ruby php nano w3m","git clone https://github.com/Ubaii/Xshell","mv Xshell ~"))
 		elif passtak == "12":
-			social()
+			download("Social-Engineering",("apt install python2 perl","git clone https://github.com/LOoLzeC/social-engineering","mv social-engineering ~"))
 		elif passtak == "13":
 			download("BlackBox",('apt install python2 git && pip2 install optparse passlib','git clone https://github.com/jothatron/blackbox','mv blackbox ~'))
 		elif passtak == "14":
 			download("Hashzer",('apt install git python2','pip2 install requests','git clone https://github.com/Anb3rSecID/Hashzer','mv Hashzer ~'))
 		elif passtak == "15":
-			hasher("Hasher",('apt install git python2 && pip2 install passlib binascii progressbar','git clone https://github.com/ciku370/hasher','mv hasher ~'))
+			download("Hasher",('apt install git python2 && pip2 install passlib binascii progressbar','git clone https://github.com/ciku370/hasher','mv hasher ~'))
 		elif passtak == "16":
 			download("Hash-Generator",('apt install git python2 && pip2 install passlib progressbar','git clone https://github.com/ciku370/hash-generator','mv hash-generator ~'))
+		elif passtak == "17":
+			download("Newbie_Box",("git clone https://github.com/binarioGH/newbie_box", "mv newbie_box ~"))
 		elif passtak == "00" or passtak == "0":
 			restart_program()
 		else:
@@ -203,7 +205,7 @@ def main():
 			"[05] WPSploit","[06] sqldump","[07] Websploit","[08] sqlmate","[09] sqlokmed",
 			"[10] zones","[11] Xshell","[12] SH33LL","[13] XAttacker","[14] XSStrike",
 			"[15] Breacher","[16] OWScan","[17] ko-dork\n","[00] Back to main menu\n"))
-		webhack = raw_input("lzmx > ")
+		webhack = input("lzmx > ")
 		
 		if webhack == "01" or webhack == "1":
 			download("sqlmap",('apt install git python2','git clone https://github.com/sqlmapproject/sqlmap','mv sqlmap ~'))
@@ -247,7 +249,7 @@ def main():
 		printoptions(("\n[01] Metasploit","[02] commix","[03] sqlmap","[04] Brutal","[05] A-Rat",
 			"[06] WPSploit","[07] Websploit","[08] Routersploit","[09] BlackBox","[10] XAttacker"
 			"[11] TXTool\n","[00] Back to main menu\n")) 
-		exploitool = raw_input("lzmx > ")
+		exploitool = input("lzmx > ")
 		
 		if exploitool == "01" or exploitool == "1":
 			download("Metasploit",("apt install git wget curl","wget https://gist.githubusercontent.com/Gameye98/d31055c2d71f2fa5b1fe8c7e691b998c/raw/09e43daceac3027a1458ba43521d9c6c9795d2cb/msfinstall.sh","mv msfinstall.sh ~;cd ~;sh msfinstall.sh"))
@@ -256,13 +258,13 @@ def main():
 		elif exploitool == "03" or exploitool == "3":
 			download("sqlmap",('apt install git python2','git clone https://github.com/sqlmapproject/sqlmap','mv sqlmap ~'))
 		elif exploitool == "04" or exploitool == "4":
-			download("Brutal",())
+			download("Brutal",('apt install git','git clone https://github.com/Screetsec/Brutal','mv Brutal ~'))
 		elif exploitool == "05" or exploitool == "5":
-			a_rat()
+			download("A-Rat",('apt install python2 git','git clone https://github.com/Xi4u7/A-Rat','mv A-Rat ~'))
 		elif exploitool == "06" or exploitool == "6":
-			wpsploit()
+			download("WPSploit",('apt update && apt upgrade','apt install python2 git','git clone git clone https://github.com/m4ll0k/wpsploit','mv wpsploit ~'))
 		elif exploitool == "07" or exploitool == "7":
-			websploit()
+			download("Websploit",('apt install git python2','pip2 install scapy','git clone https://github.com/The404Hacking/websploit','mv websploit ~'))
 		elif exploitool == "08" or exploitool == "8":
 			download("Routersploit",('apt install python2 git','pip2 install requests','git clone https://github.com/reverse-shell/routersploit','mv routersploit ~;cd ~/routersploit;pip2 install -r requirements.txt;termux-fix-shebang rsf.py'))
 		elif exploitool == "09" or exploitool == "9":
@@ -270,30 +272,33 @@ def main():
 		elif exploitool == "10":
 			download("XAttacker",('apt install git perl','cpnm install HTTP::Request','cpnm install LWP::Useragent','git clone https://github.com/Moham3dRiahi/XAttacker','mv XAttacker ~'))
 		elif exploitool == "11":
-			txtool()
+			download("TXTool",('apt install git python2 nmap php curl','pip2 install requests','git clone https://github.com/kuburan/txtool','mv txtool ~'))
 		elif exploitool == "00" or exploitool == "0":
 			restart_program()
 		else:
 			wronginput()
 	elif lazymux == "7" or lazymux == "07":
 		printoptions(("\n[01] KnockMail","[02] Spammer-Grab","[03] Hac","[04] Spammer-Email",
-			"[05] SocialFish","[06] santet-online","[07] SpazSMS\n","[00] Back to main menu\n"))
-		sspoof = raw_input("lzmx > ")
+			"[05] SocialFish","[06] santet-online","[07] SpazSMS","[08] sPYam\n","[00] Back to main menu\n"))
+		sspoof = input("lzmx > ")
 		
 		if sspoof == "01" or sspoof == "1":
-			knockmail()
+			download("KnockMail",('apt install python2 git','pip2 install validate_email pyDNS','git clone https://github.com/4w4k3/KnockMail','mv KnockMail ~'))
 		elif sspoof == "02" or sspoof == "2":
-			spammer_grab()
+			download("Spammer-Grab",('apt install python2 git && pip2 install requests','git clone https://github.com/p4kl0nc4t/spammer-grab','mv spammer-grab ~',))
 		elif sspoof == "03" or sspoof == "3":
-			hac()
+			download("Hac",('apt install php git','git clone https://github.com/Cvar1984/Hac','mv Hac ~'))
 		elif sspoof == "04" or sspoof == "4":
-			spammer_email()
+			download("Spammer-Email",("apt install git python2 && pip2 install argparse requests","git clone https://github.com/p4kl0nc4t/Spammer-Email","mv Spammer-Email ~"))
 		elif sspoof == "05" or sspoof == "5":
-			socfish()
+			download("SocialFish",('apt install python2 git && pip2 install wget','git clone https://github.com/UndeadSec/SocialFish','mv SocialFish ~'))
 		elif sspoof == "06" or sspoof == "6":
-			sanlen()
+			download("santet-online",('apt install git python2 && pip2 install requests','git clone https://github.com/Gameye98/santet-online','mv santet-online ~'))
 		elif sspoof == "07" or sspoof == "7":
-			spazsms()
+			download("SpazSMS",('apt install git python2 && pip2 install requests','git clone https://github.com/Gameye98/SpazSMS','mv SpazSMS ~'))
+		elif sspoof == "08" or sspoof == "8":
+			download("sPYam",("git clone https://github.com/binarioGH/sPYam", "mv sPYam ~"))
+
 		elif sspoof == "00" or sspoof == "0":
 			restart_program()
 		else:
@@ -303,28 +308,28 @@ def main():
 		printoptions(("\n[01] SpiderBot","[02] ngrokrok","[03] Sudo","[04] Ubuntu","[05] Fedora",
 			"[06] Kali Nethunter","[07] VCRT","[08] E-Code","[09] Termux-Styling","[10] PassGen\n",
 			"[00] Back to main menu\n"))
-		moretool = raw_input("lzmx > ")
+		moretool = input("lzmx > ")
 		
 		if moretool == "01" or moretool == "1":
-			spiderbot()
+			download("SpiderBot",("apt install git php","git clone https://github.com/Cvar1984/SpiderBot","mv SpiderBot ~"))
 		elif moretool == "02" or moretool == "2":
-			ngrok()
+			download("Ngrok",('apt install git','git clone https://github.com/themastersunil/ngrok','mv ngrok ~'))
 		elif moretool == "03" or moretool == "3":
-			sudo()
+			download("Sudo",('apt install ncurses-utils git','git clone https://github.com/st42/termux-sudo','mv termux-sudo ~ && cd ~/termux-sudo && chmod 777 *','cat sudo > /data/data/com.termux/files/usr/bin/sudo','chmod 700 /data/data/com.termux/files/usr/bin/sudo'))
 		elif moretool == "04" or moretool == "4":
-			ubuntu()
+			download("Ubuntu",('apt install python2 git','git clone https://github.com/Neo-Oli/termux-ubuntu','mv termux-ubuntu ~ && cd ~/termux-ubuntu && bash ubuntu.sh'))
 		elif moretool == "05" or moretool == "5":
-			fedora()
+			download("Fedora",('apt install wget git','wget https://raw.githubusercontent.com/nmilosev/termux-fedora/master/termux-fedora.sh','mv termux-fedora.sh ~'))
 		elif moretool == "06" or moretool == "6":
-			nethunter()
+			download("Kali NetHunter",('apt install git','git clone https://github.com/Hax4us/Nethunter-In-Termux','mv Nethunter-In-Termux ~'))
 		elif moretool == "07" or moretool == "7":
-			vcrt()
+			download("VCRT",('apt install python2 git','git clone https://github.com/LOoLzeC/Evil-create-framework','mv Evil-create-framework ~'))
 		elif moretool == "08" or moretool == "8":
-			ecode()
+			download("ECode",('apt update && apt upgrade','apt install php git','git clone https://github.com/Cvar1984/Ecode','mv Ecode ~'))
 		elif moretool == "09" or moretool == "9":
-			stylemux()
+			download("Termux-Styling",('apt install git','git clone https://github.com/BagazMukti/Termux-Styling-Shell-Script','mv Termux-Styling-Shell-Script ~'))
 		elif moretool == "10":
-			passgencvar()
+			download("PassGen",('apt install git php','git clone https://github.com/Cvar1984/PassGen','mv PassGen ~'))
 		elif moretool == "00" or moretool == "0":
 			restart_program()
 		else:
