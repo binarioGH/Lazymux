@@ -72,7 +72,7 @@ def main():
 			 "[11] Wordpresscan","[12] WPScan","[13] sqlmate","[14] wordpresscan","[15] WTF",
 			 "[16] Rang3r","[17] Striker","[18] Routersploit","[19] Xshell","[20] SH33LL",
 			 "[21] BlackBox","[22] XAttacker","[23] OWScan\n","[00] Back to main menu\n"))
-		vulnscan = raw_input("lzmx > ")
+		vulnscan = input("lzmx > ")
 		if vulnscan == "01" or vulnscan == "1":
 			download("Nmap", ('apt install nmap'))
 		elif vulnscan == "02" or vulnscan == "2":
@@ -127,7 +127,7 @@ def main():
 		printoptions(("\n[01] Torshammer","[02] Slowloris","[03] Fl00d & Fl00d2","[04] GoldenEye",
 			"[05] Xerxes","[06] Planetwork-DDOS","[07] Hydra","[08] Black Hydra","[09] Xshell",
 			"[10] santet-online\n","[00] Back to main menu\n"))
-		stresstest = raw_input("lzmx > ")
+		stresstest = input("lzmx > ")
 		if stresstest == "01" or stresstest == "1":
 			download("Torshammer",('apt install python2 git','git clone https://github.com/dotfighter/torshammer','mv torshammer ~'))
 		elif stresstest == "02" or stresstest == "2":
@@ -159,7 +159,7 @@ def main():
 			"[08] Cupp","[09] InstaHack","[10] Indonesian Wordlist","[11] Xshell",
 			"[12] Social-Engineering","[13] BlackBox","[14] Hashzer","[15] Hasher",
 			"[16] Hash-Generator","[17] Newbie_Box\n","[00] Back to main menu\n"))
-		passtak = raw_input("lzmx > ")
+		passtak = input("lzmx > ")
 		
 		if passtak == "01" or passtak == "1":
 			download("Hydra",('apt install hydra'))
