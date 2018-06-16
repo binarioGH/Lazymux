@@ -40,7 +40,7 @@ def restart_program():
 
 def wronginput():
 	print("\nERROR: Wrong Input")
-	timeout(2)
+	time.sleep(2)
 	restart_program()
 
 

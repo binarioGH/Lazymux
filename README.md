@@ -13,7 +13,7 @@ git clone https://github.com/binarioGH/Lazymux
 cd Lazymux
 ```
 ```
-python lazymux.py
+python install.py
 ```
 
 ## Donation

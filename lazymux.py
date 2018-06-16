@@ -1,9 +1,7 @@
 #!/usr/bin/python
 ## lazymux.py - Lazymux v4.0
 # -*- coding: utf-8 -*-
-import os
 import sys
-from time import sleep as timeout
 from core.lzmcore import *
 
 def main():
